@@ -1,2 +1,29 @@
 
 This is the Link which contains the notes about Git,GitHub and Eclipse IDE: https://chatgpt.com/share/6823193f-1898-800f-8d8a-3a89b806c73d
+
+
+| Feature                | **Comparable**                   | **Comparator**                                       |
+| ---------------------- | -------------------------------- | ---------------------------------------------------- |
+| **Ordering Type**      | Natural ordering                 | Custom ordering                                      |
+| **Implementation**     | Implemented by the class itself  | Separate class or lambda                             |
+| **Method to Override** | `compareTo()`                    | `compare()`                                          |
+| **Use Case**           | When default sorting makes sense | When flexible or multiple sorting options are needed |
+| **Syntax Example**     | See below                        | See below                                            |
+
+
+Example using Comparable
+
+
+class Employee implements Comparable<Employee> {
+    int id;
+    
+    public int compareTo(Employee e) {
+        return this.id - e.id;
+    }
+}
+Example using Comparator
+
+
+Comparator<Employee> bySalary = (e1, e2) -> {
+    return e1.salary - e2.salary;
+};
