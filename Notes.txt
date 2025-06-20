@@ -1,5 +1,55 @@
 
-This is the Link which contains the notes about Git,GitHub and Eclipse IDE: https://chatgpt.com/share/6823193f-1898-800f-8d8a-3a89b806c73d
+This is the Link which contains the notes about Git,GitHub and Eclipse IDE: https://chatgpt.com/share/6823193f-1898-800f-8d8a-3a89b806c73d.
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+<h2 style="color:red">🔴 Difference Between Comparable and Comparator in Java</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>✅ Feature</th>
+      <th style="color:red">Comparable</th>
+      <th style="color:red">Comparator</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Package</td>
+      <td><code>java.lang</code></td>
+      <td><code>java.util</code></td>
+    </tr>
+    <tr>
+      <td>Purpose</td>
+      <td>Defines default sorting logic</td>
+      <td>Defines custom sorting logic</td>
+    </tr>
+    <tr>
+      <td>Method</td>
+      <td><code>compareTo(Object o)</code></td>
+      <td><code>compare(Object o1, Object o2)</code></td>
+    </tr>
+    <tr>
+      <td>Sorting Logic Location</td>
+      <td>Inside the class being sorted</td>
+      <td>In a separate class</td>
+    </tr>
+    <tr>
+      <td>Usage</td>
+      <td>Used when natural ordering is required</td>
+      <td>Used when different sort logic is needed</td>
+    </tr>
+    <tr>
+      <td>Modifies Source Class?</td>
+      <td>Yes (implements Comparable)</td>
+      <td>No (external class)</td>
+    </tr>
+    <tr>
+      <td>Example</td>
+      <td>Collections.sort(list); (class implements Comparable)</td>
+      <td>Collections.sort(list, new ComparatorClass());</td>
+    </tr>
+  </tbody>
+</table>
 
 
 | Feature                | **Comparable**                   | **Comparator**                                       |
