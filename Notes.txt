@@ -27,3 +27,34 @@ Example using Comparator
 Comparator<Employee> bySalary = (e1, e2) -> {
     return e1.salary - e2.salary;
 };
+
+# 🚀 Important Spring Boot Annotations
+
+A handy reference of commonly used annotations in Spring Boot with their purpose and examples.
+
+| ✅ **Annotation**                    | 🧠 **Purpose**                                                              | 📌 **Used On**                   | 🔧 **Usage Example**                                  |
+|------------------------------------|-----------------------------------------------------------------------------|----------------------------------|--------------------------------------------------------|
+| `@SpringBootApplication`           | Combines `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan` | Main class                       | `@SpringBootApplication`                               |
+| `@RestController`                  | Combines `@Controller` and `@ResponseBody` for REST APIs                    | Class                            | `@RestController`                                      |
+| `@RequestMapping`                  | Maps HTTP requests to handler methods (GET, POST, etc.)                     | Method or class                  | `@RequestMapping("/api")`                              |
+| `@GetMapping`, `@PostMapping`, etc.| Shortcut annotations for HTTP methods                                      | Method                           | `@GetMapping("/users")`                                |
+| `@Autowired`                       | Automatically injects dependencies (beans)                                 | Field, setter, constructor       | `@Autowired UserService service;`                      |
+| `@Component`                       | Marks a class as a Spring component                                        | Class                            | `@Component`                                           |
+| `@Service`                         | Specialization of `@Component` for business logic classes                  | Class                            | `@Service`                                             |
+| `@Repository`                      | Specialization of `@Component` for DAO classes; also handles exceptions    | Class                            | `@Repository`                                          |
+| `@Entity`                          | Marks a class as a JPA entity                                              | Class                            | `@Entity public class User {}`                         |
+| `@Table`                           | Specifies the database table name for the entity                           | Class                            | `@Table(name="users")`                                 |
+| `@Id`                              | Marks the primary key of a JPA entity                                      | Field                            | `@Id private Long id;`                                 |
+| `@GeneratedValue`                  | Specifies auto-generation strategy for IDs                                 | Field                            | `@GeneratedValue(strategy = GenerationType.IDENTITY)`  |
+| `@Column`                          | Maps a class field to a table column                                       | Field                            | `@Column(name="email")`                                |
+| `@EnableAutoConfiguration`         | Enables Spring Boot’s auto-configuration                                   | Class                            | Included in `@SpringBootApplication`                   |
+| `@ComponentScan`                   | Tells Spring where to look for components (beans)                          | Class                            | `@ComponentScan("com.example")`                        |
+| `@Configuration`                   | Defines configuration class (equivalent to XML config)                     | Class                            | `@Configuration`                                       |
+| `@Value`                           | Injects values from `application.properties`                               | Field                            | `@Value("${server.port}")`                             |
+| `@Bean`                            | Declares a bean to be managed by Spring container                          | Method in `@Configuration` class | `@Bean public MyService myService() {}`                |
+| `@PathVariable`                    | Binds URL path variables to method parameters                              | Method parameter                 | `@GetMapping("/users/{id}")`                           |
+| `@RequestParam`                    | Binds query parameters to method parameters                                | Method parameter                 | `@RequestParam String name`                            |
+| `@ResponseBody`                    | Returns the response as JSON/XML instead of a view                         | Method                           | Included in `@RestController`                          |
+| `@RequestBody`                     | Binds JSON body to Java object in POST/PUT requests                        | Method parameter                 | `@RequestBody User user`                               |
+| `@ControllerAdvice`                | Global exception handling and data binding customization                   | Class                            | `@ControllerAdvice`                                    |
+| `@ExceptionHandler`                | Handles specific exceptions in controllers                                 | Method                           | `@ExceptionHandler(CustomException.class)`             |
