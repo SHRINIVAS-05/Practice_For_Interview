@@ -1,0 +1,13 @@
+ ✅ Comparable vs Comparator in Java
+ 
+ | Feature                     | **Comparable**                                               | **Comparator**                                                    |
+| --------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------- |
+| **Package**                 | `java.lang`                                                  | `java.util`                                                       |
+| **Purpose**                 | Used to define **natural ordering** of objects               | Used to define **custom ordering**                                |
+| **Method to implement**     | `compareTo(Object o)`                                        | `compare(Object o1, Object o2)`                                   |
+| **Sorting logic location**  | Inside the class being compared                              | Outside the class, in a separate class                            |
+| **Can sort by**             | Only **one field** (unless you manually modify logic)        | Multiple fields with different comparators                        |
+| **Used in**                 | `Collections.sort()` or `Arrays.sort()` (without comparator) | `Collections.sort()` or `Arrays.sort()` with comparator           |
+| **Example use case**        | `String`, `Integer` classes implement Comparable             | Sort `Employee` by salary, name, etc. using different comparators |
+| **Affects original class?** | Yes, requires modifying the class                            | No, you can keep sorting logic separate                           |
+ 

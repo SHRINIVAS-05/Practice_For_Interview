@@ -1,0 +1,20 @@
+
+✅ What is a Singleton?
+The Singleton Pattern ensures that only one instance of a class is created throughout the application and provides a global point of access to that instance.
+
+This is useful when:
+
+You want to control access to shared resources (like a configuration class, database connection, logger, etc.)
+
+You need exactly one instance of a class
+
+✅ Explanation
+
+Step	Description
+private static Singleton instance;	Holds the single instance of the class
+private Singleton()	Prevents direct instantiation using new
+public static synchronized Singleton getInstance()	Lazily initializes the instance and ensures thread-safety
+s1 == s2	Both variables point to the same object in memory
+
+
+Stream API Link -->: https://chatgpt.com/share/67ff9b71-05e8-800c-a6d4-fdc3eaca2b41
